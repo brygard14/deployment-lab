@@ -6,6 +6,9 @@ const app = express()
 
 app.use(express.static('client'))
 
+app.get('/', () => {
+    res.sendFile(path.join(__dirname, '../index.html'))
+})
 
 const port = process.env.PORT || 4040
 
