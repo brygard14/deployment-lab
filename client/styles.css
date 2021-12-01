@@ -1,9 +1,25 @@
 * {
-    margin:0px;
+    margin:10px;
     padding:0px;
     box-sizing:border-box;
 }
 
 h1 {
-    color: mediumorchid;
+    color:mediumslateblue;
+}
+
+img {
+    width: 1000px;
+}
+
+h4, p {
+    word-wrap: normal;
+}
+
+h4 {
+    color:mediumorchid;
+}
+
+p {
+    color: indigo;
 }
