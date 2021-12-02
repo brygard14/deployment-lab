@@ -6,13 +6,13 @@ const path = require('path')
 
 const app = express()
 
-const { ROLLBAR_TOKEN } = process.env
+// const { ROLLBAR_TOKEN } = process.env
 
 app.use(express.static('client'))
 
 const Rollbar = require('rollbar')
 const rollbar = new Rollbar({
-  accessToken: ROLLBAR_TOKEN,
+  accessToken: '4a667ec47e074d2daba3cee132c97b2a',
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
@@ -20,7 +20,7 @@ const rollbar = new Rollbar({
 app.get('/', () => {
     rollbar.info("contact made")
 
-    res.sendFile(path.join(__dirname, '../index.html'))
+    res.sendFile(path.join(__dirname, "../client/index.html"))
 })
 
 const port = process.env.PORT || 4040
