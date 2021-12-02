@@ -18,6 +18,8 @@ const rollbar = new Rollbar({
 })
 
 app.get('/', () => {
+    rollbar.info("contact made")
+
     res.sendFile(path.join(__dirname, '../index.html'))
 })
 
